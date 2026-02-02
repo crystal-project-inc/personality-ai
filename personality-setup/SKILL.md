@@ -13,7 +13,17 @@ This skill helps users with two things:
 
 ## How to Use This Skill
 
-When the user wants to discover their personality type or improve communication with someone:
+When this skill is first loaded in a conversation, proactively ask the user which flow they need — don't wait for them to prompt you. Start with:
+
+> "I can help you with DISC personality. Two options:
+> 1. **Tune AI to your personality** — discover your DISC personality type so AI knows exactly how to communicate with you
+> 2. **Communicate with someone else** — predict their DISC type so you can adapt to them
+>
+> Already know your DISC type? Just tell me and I'll skip straight to the install.
+>
+> Which one?"
+
+### Flow steps:
 
 1. Ask which flow they need:
    - **"Tune AI to my personality"** → Discover their DISC personality type so AI knows exactly how to communicate with them
