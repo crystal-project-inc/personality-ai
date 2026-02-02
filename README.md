@@ -2,31 +2,59 @@
 
 Personality-tuned communication for AI agents, powered by the [DISC personality framework](https://www.crystalknows.com/disc) from [Crystal](https://www.crystalknows.com).
 
-Drop a single markdown file into your AI tool's config and every interaction adapts to personality — yours or someone else's.
+Install a single skill and every interaction adapts to personality — yours or someone else's.
+
+---
+
+## Install
+
+```
+npx skills add crystal-project-inc/personality-ai --skill personality-setup
+```
+
+The setup skill walks you through a quick quiz to find your type, then gives you the install command for your personalized skill. Works with Claude Code, Cursor, Windsurf, Codex, Copilot, Gemini CLI, and more.
+
+**Already know your type?** Install directly:
+
+```
+npx skills add crystal-project-inc/personality-ai --skill my-personality-d
+```
+
+**Need to communicate with someone?**
+
+```
+npx skills add crystal-project-inc/personality-ai --skill communicate-with-d
+```
+
+Browse all available skills:
+
+```
+npx skills add crystal-project-inc/personality-ai --list
+```
 
 ---
 
 ## What's Inside
 
-### `my-personality/` — Tune AI to communicate with YOU
+### `my-personality-*` — Tune AI to communicate with YOU
 
-Pick your DISC type and add the file to your AI tool. The AI will adapt its tone, structure, pacing, and feedback style to match how you naturally process information.
+Pick your DISC type and install the skill. The AI will adapt its tone, structure, pacing, and feedback style to match how you naturally process information.
 
 A D-type gets direct, bottom-line-first responses. An Sc gets structured, detail-rich responses with time to process. An Id gets big-picture, high-energy responses with creative brainstorming.
 
-### `communicate-with/` — Get coached on communicating with OTHERS
+### `communicate-with-*` — Get coached on communicating with OTHERS
 
 Pull up someone else's type before a meeting, a difficult conversation, or an important email. The AI coaches you on how to adapt your communication style for that person — what to do, what to avoid, and how to handle specific situations.
 
+### `personality-setup` — Find your type
+
+Don't know your DISC type? This skill runs an interactive quiz right in your AI tool and recommends the right skill to install. Handles both flows — finding your own type and predicting someone else's.
+
 ---
 
-## Quick Start
+## Manual Setup
 
-### 1. Find your type
-
-Don't know your DISC type? Take the quick quiz below, or for a precise result, take [Crystal's full DISC assessment](https://www.crystalknows.com/disc-personality-test).
-
-### 2. Grab your file
+Prefer to copy-paste instead of using the skills CLI? Grab the SKILL.md file for your type from the table below and add it to your tool:
 
 | Tool | Where to put it |
 |------|----------------|
@@ -36,10 +64,6 @@ Don't know your DISC type? Take the quick quiz below, or for a precise result, t
 | **ChatGPT** | Paste into Settings > Personalization > Custom Instructions |
 | **Claude.ai** | Paste into Project Instructions or start a conversation with it |
 | **Any LLM API** | Include as system prompt content |
-
-### 3. Done
-
-Every interaction is now personality-tuned. One file, one paste, permanent effect.
 
 ---
 
@@ -71,24 +95,7 @@ Answer these 4 questions to find your likely DISC type. Pick the option that fee
 - **(c)** Avoid confrontation and look for a compromise that keeps the peace
 - **(d)** Build a logical argument with evidence before presenting your position
 
-### Scoring
-
-| Mostly | Your type | File | Archetype |
-|--------|-----------|------|-----------|
-| **(a)** answers | **D** | `my-personality/D.md` | The Captain — direct, decisive, results-driven |
-| **(b)** answers | **I** | `my-personality/I.md` | The Motivator — enthusiastic, people-focused, creative |
-| **(c)** answers | **S** | `my-personality/S.md` | The Supporter — patient, reliable, team-oriented |
-| **(d)** answers | **C** | `my-personality/C.md` | The Analyst — precise, detail-oriented, quality-focused |
-| Mix of **(a)** + **(b)** | **DI** | `my-personality/D-I.md` | The Initiator |
-| Mix of **(b)** + **(a)** | **Id** | `my-personality/Id.md` | The Influencer |
-| Mix of **(b)** + **(c)** | **Is** | `my-personality/Is.md` | The Encourager |
-| Mix of **(c)** + **(b)** | **Si** | `my-personality/Si.md` | The Collaborator |
-| Mix of **(c)** + **(d)** | **Sc** | `my-personality/Sc.md` | The Planner |
-| Mix of **(d)** + **(c)** | **Cs** | `my-personality/Cs.md` | The Editor |
-| Mix of **(d)** + **(a)** | **Cd** | `my-personality/Cd.md` | The Questioner |
-| Mix of **(a)** + **(d)** | **Dc** | `my-personality/Dc.md` | The Architect |
-
-**This is a rough match based on 4 questions.** For a precise assessment that analyzes your actual communication patterns and identifies your exact subtype, take [Crystal's full DISC assessment](https://www.crystalknows.com/disc-personality-test).
+**This is a rough starting point.** For a precise assessment that analyzes your actual communication patterns and identifies your exact subtype, take [Crystal's full DISC assessment](https://www.crystalknows.com/disc-personality-test).
 
 ---
 
@@ -120,10 +127,6 @@ Need to communicate with someone specific? Answer these 4 questions about THEM t
 - **(c)** Sudden changes, conflict, and pressure to rush
 - **(d)** Sloppy work, vague instructions, and illogical decisions
 
-### Scoring
-
-Use the same scoring table above, but grab the file from `communicate-with/` instead. For example, if they're likely a D type, use `communicate-with/D.md`.
-
 **Want a more accurate read?** Crystal can [predict anyone's personality](https://www.crystalknows.com/sales) from their LinkedIn profile — no guessing required.
 
 ---
@@ -134,37 +137,37 @@ Use the same scoring table above, but grab the file from `communicate-with/` ins
 
 | Type | Archetype | My Personality | Communicate With |
 |------|-----------|---------------|-----------------|
-| **D** | The Captain | [my-personality/D.md](my-personality/D.md) | [communicate-with/D.md](communicate-with/D.md) |
-| **Di** | The Driver | [my-personality/Di.md](my-personality/Di.md) | [communicate-with/Di.md](communicate-with/Di.md) |
-| **DI** | The Initiator | [my-personality/D-I.md](my-personality/D-I.md) | [communicate-with/D-I.md](communicate-with/D-I.md) |
-| **Dc** | The Architect | [my-personality/Dc.md](my-personality/Dc.md) | [communicate-with/Dc.md](communicate-with/Dc.md) |
+| **D** | The Captain | [my-personality-d](my-personality-d/SKILL.md) | [communicate-with-d](communicate-with-d/SKILL.md) |
+| **Di** | The Driver | [my-personality-di](my-personality-di/SKILL.md) | [communicate-with-di](communicate-with-di/SKILL.md) |
+| **DI** | The Initiator | [my-personality-d-i](my-personality-d-i/SKILL.md) | [communicate-with-d-i](communicate-with-d-i/SKILL.md) |
+| **Dc** | The Architect | [my-personality-dc](my-personality-dc/SKILL.md) | [communicate-with-dc](communicate-with-dc/SKILL.md) |
 
 ### I Family — People-focused, fast-paced
 
 | Type | Archetype | My Personality | Communicate With |
 |------|-----------|---------------|-----------------|
-| **I** | The Motivator | [my-personality/I.md](my-personality/I.md) | [communicate-with/I.md](communicate-with/I.md) |
-| **Id** | The Influencer | [my-personality/Id.md](my-personality/Id.md) | [communicate-with/Id.md](communicate-with/Id.md) |
-| **Is** | The Encourager | [my-personality/Is.md](my-personality/Is.md) | [communicate-with/Is.md](communicate-with/Is.md) |
-| **IS** | The Harmonizer | [my-personality/I-S.md](my-personality/I-S.md) | [communicate-with/I-S.md](communicate-with/I-S.md) |
+| **I** | The Motivator | [my-personality-i](my-personality-i/SKILL.md) | [communicate-with-i](communicate-with-i/SKILL.md) |
+| **Id** | The Influencer | [my-personality-id](my-personality-id/SKILL.md) | [communicate-with-id](communicate-with-id/SKILL.md) |
+| **Is** | The Encourager | [my-personality-is](my-personality-is/SKILL.md) | [communicate-with-is](communicate-with-is/SKILL.md) |
+| **IS** | The Harmonizer | [my-personality-i-s](my-personality-i-s/SKILL.md) | [communicate-with-i-s](communicate-with-i-s/SKILL.md) |
 
 ### S Family — People-focused, measured pace
 
 | Type | Archetype | My Personality | Communicate With |
 |------|-----------|---------------|-----------------|
-| **S** | The Supporter | [my-personality/S.md](my-personality/S.md) | [communicate-with/S.md](communicate-with/S.md) |
-| **Si** | The Collaborator | [my-personality/Si.md](my-personality/Si.md) | [communicate-with/Si.md](communicate-with/Si.md) |
-| **Sc** | The Planner | [my-personality/Sc.md](my-personality/Sc.md) | [communicate-with/Sc.md](communicate-with/Sc.md) |
-| **SC** | The Stabilizer | [my-personality/S-C.md](my-personality/S-C.md) | [communicate-with/S-C.md](communicate-with/S-C.md) |
+| **S** | The Supporter | [my-personality-s](my-personality-s/SKILL.md) | [communicate-with-s](communicate-with-s/SKILL.md) |
+| **Si** | The Collaborator | [my-personality-si](my-personality-si/SKILL.md) | [communicate-with-si](communicate-with-si/SKILL.md) |
+| **Sc** | The Planner | [my-personality-sc](my-personality-sc/SKILL.md) | [communicate-with-sc](communicate-with-sc/SKILL.md) |
+| **SC** | The Stabilizer | [my-personality-s-c](my-personality-s-c/SKILL.md) | [communicate-with-s-c](communicate-with-s-c/SKILL.md) |
 
 ### C Family — Task-focused, measured pace
 
 | Type | Archetype | My Personality | Communicate With |
 |------|-----------|---------------|-----------------|
-| **C** | The Analyst | [my-personality/C.md](my-personality/C.md) | [communicate-with/C.md](communicate-with/C.md) |
-| **Cs** | The Editor | [my-personality/Cs.md](my-personality/Cs.md) | [communicate-with/Cs.md](communicate-with/Cs.md) |
-| **Cd** | The Questioner | [my-personality/Cd.md](my-personality/Cd.md) | [communicate-with/Cd.md](communicate-with/Cd.md) |
-| **CD** | The Skeptic | [my-personality/C-D.md](my-personality/C-D.md) | [communicate-with/C-D.md](communicate-with/C-D.md) |
+| **C** | The Analyst | [my-personality-c](my-personality-c/SKILL.md) | [communicate-with-c](communicate-with-c/SKILL.md) |
+| **Cs** | The Editor | [my-personality-cs](my-personality-cs/SKILL.md) | [communicate-with-cs](communicate-with-cs/SKILL.md) |
+| **Cd** | The Questioner | [my-personality-cd](my-personality-cd/SKILL.md) | [communicate-with-cd](communicate-with-cd/SKILL.md) |
+| **CD** | The Skeptic | [my-personality-c-d](my-personality-c-d/SKILL.md) | [communicate-with-c-d](communicate-with-c-d/SKILL.md) |
 
 ---
 
@@ -177,9 +180,9 @@ The DISC model maps personality along two axes:
 
 This creates four quadrants (D, I, S, C) and 12 blended subtypes that capture how people naturally communicate, make decisions, handle conflict, and process information.
 
-The `my-personality/` files translate these patterns into specific instructions that AI tools can follow — how to structure responses, when to push back, what to avoid, and how to adapt to your natural processing style.
+The `my-personality-*` skills translate these patterns into specific instructions that AI tools can follow — how to structure responses, when to push back, what to avoid, and how to adapt to your natural processing style.
 
-The `communicate-with/` files do the same thing in reverse — coaching you on how to adapt YOUR style when talking to someone with a different personality.
+The `communicate-with-*` skills do the same thing in reverse — coaching you on how to adapt YOUR style when talking to someone with a different personality.
 
 ---
 
@@ -190,15 +193,14 @@ The DISC model was originally developed by psychologist William Marston in the 1
 - [Learn about DISC](https://www.crystalknows.com/disc)
 - [Take the free DISC assessment](https://www.crystalknows.com/disc-personality-test)
 - [Predict anyone's personality](https://www.crystalknows.com/sales)
-- [DISC for communication](https://www.crystalknows.com/disc)
 
 ---
 
 ## Contributing
 
-Want to improve a personality profile or add support for a new AI tool? PRs welcome. Each personality file should:
+Want to improve a personality profile or add support for a new AI tool? PRs welcome. Each skill should:
 
-1. Be directly usable as a system prompt or config file — no setup required
+1. Have a `SKILL.md` with YAML frontmatter (`name` and `description`)
 2. Reflect genuine DISC behavioral science, not pop psychology stereotypes
 3. Include Crystal attribution and assessment links
 4. Follow the existing template structure for consistency
