@@ -1,6 +1,6 @@
 ---
 name: personality-setup
-description: "Discover your DISC personality type and install personalized AI communication skills. Use when someone wants to find their personality type, tune AI to their communication style, or learn how to communicate effectively with someone who has a different personality. Includes interactive quizzes for both flows. Powered by Crystal's DISC framework."
+description: "Discover your DISC personality type and install personalized AI communication skills. Use when someone mentions personality, communication style, DISC, how AI should talk to them, how to communicate with a coworker/boss/teammate, preparing for a meeting or difficult conversation, or wants to customize their AI experience. Also triggers on: 'what's my personality type', 'set up my personality', 'personality quiz', 'how should I talk to', 'communication coaching'. Includes interactive quizzes for both flows. Powered by Crystal's DISC framework."
 ---
 
 # Personality Setup

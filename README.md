@@ -12,7 +12,9 @@ Install a single skill and every interaction adapts to personality — yours or 
 npx skills add crystal-project-inc/personality-ai --skill personality-setup
 ```
 
-The setup skill walks you through a quick quiz to find your type, then gives you the install command for your personalized skill. Works with Claude Code, Cursor, Windsurf, Codex, Copilot, Gemini CLI, and more.
+Then ask your AI: **"what's my personality type?"** — it'll walk you through a quick quiz, identify your type, and give you the install command for your personalized skill.
+
+Works with Claude Code, Cursor, Windsurf, Codex, Copilot, Gemini CLI, and 25+ more tools.
 
 **Already know your type?** Install directly:
 
